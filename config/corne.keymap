@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/pointing.h>
 #include "mouse.dtsi"
 #include "zmk-helpers/helper.h"
-#include "zmk-helpers/key-labels/36.h"
+//#include "zmk-helpers/key-labels/36.h"
 
 #define MOUSE 10
 
