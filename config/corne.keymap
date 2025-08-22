@@ -412,6 +412,7 @@
         };
 
         layer_3 {
+            label = "Shortcuts";
             bindings = <
   &none  &none  &kp LG(LC(LS(E)))  &none              &none     &none   &none              &none              &kp LG(LC(LS(O)))  &none
   &none  &none  &kp LG(LC(LS(D)))  &kp LG(LC(LS(F)))  &none     &none   &kp LG(LC(LS(J)))  &kp LG(LC(LS(K)))  &none              &none
@@ -421,6 +422,7 @@
         };
 
         layer_4 {
+            label = "4";
             bindings = <
   &sys_reset  &trans         &trans     &trans          &trans    &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)
   &kp LCMD    &kp LEFT_ALT   &kp LCTRL  &kp LEFT_SHIFT  &trans    &kp ESC        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
@@ -430,6 +432,7 @@
         };
 
         layer_5 {
+            label = "5";
             bindings = <
   &sys_reset  &trans         &trans     &trans          &trans    &kp LC(LS(Z))  &kp LC(V)  &kp LC(C)  &kp LC(X)  &kp LC(Z)
   &kp LCMD    &kp LEFT_ALT   &kp LCTRL  &kp LEFT_SHIFT  &trans    &kp LC(GRAVE)  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
@@ -439,6 +442,7 @@
         };
 
         layer_6 {
+            label = "Media";
             bindings = <
   &sys_reset  &trans         &trans     &trans          &trans    &none          &none       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &none
   &kp LCMD    &kp LEFT_ALT   &kp LCTRL  &kp LEFT_SHIFT  &trans    &kp LC(LS(M))  &kp C_PREV  &kp C_VOLUME_DOWN     &kp C_VOL_UP          &kp C_NEXT
@@ -448,6 +452,7 @@
         };
 
         layer_7 {
+            label = "Num";
             bindings = <
   &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &trans  &trans    &trans    &trans  &sys_reset
   &kp P      &kp N4  &kp N5   &kp N6  &kp EQUAL    &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
@@ -457,6 +462,7 @@
         };
 
         layer_8 {
+            label = "Sym";
             bindings = <
   &kp LEFT_BRACE  &kp AMPS    &kp STAR              &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &trans  &trans     &trans     &trans    &sys_reset
   &kp LS(P)       &kp DOLLAR  &kp PERCENT           &kp CARET              &kp PLUS           &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
@@ -466,6 +472,7 @@
         };
 
         layer_9 {
+            label = "Fn";
             bindings = <
   &kp F12  &kp F7  &kp F8  &kp F9  &kp SYSREQ        &kp K_APP  &trans     &trans     &trans    &sys_reset
   &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK    &trans     &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
@@ -475,6 +482,7 @@
         };
 
         layer_10 {
+            label = "Sym2";
             bindings = <
   &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR
   &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH
