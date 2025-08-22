@@ -12,7 +12,7 @@
 //#include "zmk-helpers/helper.h"
 //#include "zmk-helpers/key-labels/36.h"
 
-//#define MOUSE 10
+#define MOUSE 10
 
 // Smart-mouse, requires tri-state module.
 /*
@@ -31,6 +31,19 @@ ZMK_TRI_STATE(
 
 / {
     behaviors {
+        smart_mouse: smart_mouse {
+            compatible = "zmk,behavior-tri-state";
+            label = "SMART_MOUSE";
+            #binding-cells = <0>;
+
+            /* first press, second press, interruption */
+            bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
+
+            /* optional: start simple, add these later if desired */
+            /* ignored-key-positions = < /* numeric positions only *\/ >; */
+            ignored-layers = <MOUSE>;
+        };
+
         hold_layer: hold_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_LAYER";
