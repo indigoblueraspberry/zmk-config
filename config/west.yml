@@ -1,66 +1,33 @@
-# This file specifies the build dependencies for Github Action workflows and
-# for local build environments. The workspace has four toplevel directories
-# containing the user config, modules, zephy and ZMK.
-#
-# ZMK-Workspace
-# ├── config
-# ├── modules
-# ├── zephyr
-# └── zmk
-#
-# To create a local build environment, clone this repository and then run the
-# following commands from its toplevel directory:
-#
-# $ west init -l config
-# $ west update
-# $ west zephyr-export
-#
----
 manifest:
-  defaults:
-    remote: urob
-    revision: v0.3 # Pin everything to v0.3
-
   remotes:
-    - name: urob
-      url-base: https://github.com/urob
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-
+    # Additional modules containing boards/shields/custom code can be listed here as well
+    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    # support nice_oled and nice_epaper
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
+    - name: infely # new entry
+      url-base: https://github.com/infely # new entry
+    - name: joelspadin
+      url-base: https://github.com/joelspadin
   projects:
     - name: zmk
       remote: zmkfirmware
+      revision: main
       import: app/west.yml
-
-    # ZMK modules
-    - name: zmk-adaptive-key
-      path: modules/zmk/adaptive-key
-    - name: zmk-auto-layer
-      path: modules/zmk/auto-layer
-    - name: zmk-helpers
-      path: modules/zmk/helpers
-    - name: zmk-leader-key
-      path: modules/zmk/leader-key
-    - name: zmk-tri-state
-      path: modules/zmk/tri-state
-    - name: zmk-unicode
-      path: modules/zmk/unicode
-
-    # Temporarily overload Zephyr until
-    # https://github.com/zmkfirmware/zephyr/pull/40 is merged.
-    - name: zephyr
-      revision: v3.5.0+zmk-fixes
-      clone-depth: 1
-      import:
-        # Only enable most commonly used boards. For less common hardware one
-        # may need to enable additional modules.
-        name-allowlist:
-          - cmsis
-          - hal_nordic
-          - hal_rpi_pico
-          - hal_stm32
-          - lvgl
-          - tinycrypt
-
+    # support nice_oled and nice_epaper
+    - name: zmk-nice-oled
+      remote: mctechnology17
+      revision: main
+      path: modules/zmk/nice-oled
+    - name: nice-view-battery # new entry
+      remote: infely # new entry
+      revision: main # new entry
+      path: modules/zmk/nice-view-battery
+    - name: zmk-locales
+      remote: joelspadin
+      revision: main
+      path: modules/zmk/locales
   self:
     path: config
