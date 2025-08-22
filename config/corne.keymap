@@ -40,7 +40,7 @@ ZMK_TRI_STATE(
             bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
 
             /* optional: start simple, add these later if desired */
-            /* ignored-key-positions = < /* numeric positions only *\/ >; */
+            ignored-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35 32 31 30>;
             ignored-layers = <MOUSE>;
         };
 
