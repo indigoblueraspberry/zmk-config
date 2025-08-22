@@ -242,3 +242,68 @@ breaking the build environment. When in doubt, I recommend keeping the
 environment pinned to `flake.lock`, which is
 [continuously tested](https://github.com/urob/zmk-config/actions/workflows/test-build-env.yml)
 on all systems.)
+
+## Bonus: A (moderately) faster Github Actions Workflow
+
+Using the same Nix-based environment, I have set up a drop-in replacement for
+the default ZMK Github Actions build workflow. While mainly a proof-of-concept,
+it does run moderately faster, especially with a cold cache.
+
+## Issues and workarounds
+
+Since I switched from QMK to ZMK I have been very impressed with how easy it is
+to set up relatively complex layouts in ZMK. For the most parts I don't miss any
+functionality (to the contrary, I found that ZMK supports many features natively
+that would require complex user-space implementations in QMK). Below are a few
+remaining issues:
+
+- ZMK does not yet support "tap-only" combos
+  ([#544](https://github.com/zmkfirmware/zmk/issues/544)), requiring a brief
+  pause when wanting to chord HRMs that overlap with combo positions. As a
+  workaround, I implemented all homerow combos as homerow-mod-combos. This is
+  good enough for day-to-day, but does not address all edge cases (eg changing
+  active mods).
+- Very minor: `&bootloader` doesn't work with stm32 boards like the Planck
+  ([#1086](https://github.com/zmkfirmware/zmk/issues/1086))
+
+## Related resources
+
+- The
+  [collection](https://github.com/search?q=topic%3Azmk-module+fork%3Atrue+owner%3Aurob+&type=repositories)
+  of ZMK modules used in this configuration.
+- A ZMK-centric
+  [introduction to Git](https://gist.github.com/urob/68a1e206b2356a01b876ed02d3f542c7)
+  (useful for maintaining your own ZMK fork with a custom selection of PRs).
+
+[^1]:
+    I call it "timer-less", because the large tapping-term makes the behavior
+    insensitive to the precise timings. One may say that there is still the
+    `require-prior-idle` timeout. However, with both a large tapping-term and
+    positional-hold-taps, the behavior is _not_ actually sensitive to the
+    `require-prior-idle` timing: All it does is reduce the delay in typing;
+    i.e., variations in typing speed won't affect _what_ is being typed but
+    merely _how fast_ it appears on the screen.
+
+[^2]:
+    The delay is determined by how quickly a key is released and is not directly
+    related to the tapping-term. But regardless of its duration, most people
+    still find it noticeable and disruptive.
+
+[^3]:
+    E.g, if your WPM is 70 or larger, then the default of 150ms (=10500/70)
+    should work well. The rule of thumb is based on an average character length
+    of 4.7 for English words. Taking into account 1 extra tap for `space`, this
+    yields a minimum `require-prior-idle-ms` of (60 _ 1000) / (5.7 _ x) ≈ 10500
+    / x milliseconds. The approximation errs on the safe side, as in practice
+    home row taps tend to be faster than average.
+
+[^4]:
+    `nix-direnv` provides a vastly improved caching experience compared to only
+    having `direnv`, making entering and exiting the workspace instantaneous
+    after the first time.
+
+[^5]:
+    This will permanently install the packages into your local profile, forgoing
+    many of the benefits that make Nix uniquely powerful. A better approach,
+    though beyond the scope of this document, is to use `home-manager` to
+    maintain your user environment.
