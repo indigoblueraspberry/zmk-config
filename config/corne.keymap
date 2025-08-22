@@ -12,9 +12,10 @@
 //#include "zmk-helpers/helper.h"
 //#include "zmk-helpers/key-labels/36.h"
 
-#define MOUSE 10
+//#define MOUSE 10
 
 // Smart-mouse, requires tri-state module.
+/*
 ZMK_TRI_STATE(
     smart_mouse,
     bindings = <&tog MOUSE>, <&none>, <&tog MOUSE>;
@@ -22,6 +23,7 @@ ZMK_TRI_STATE(
         <RT0 RT1 RT2 RT3 RM0 RM1 RM2 RM3 RM4 RB1 RB2 RB3 RH1 RH2>;
     ignored-layers = <MOUSE>;
 )
+*/
 
 / {
     chosen { zmk,matrix_transform = &five_column_transform; };
