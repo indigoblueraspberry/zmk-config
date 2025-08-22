@@ -12,7 +12,7 @@ configuration. It is based on
 - Fully automated, nix-powered
   [local build environment](#local-build-environment)
 
-![](draw/corne.svg)
+![](draw/corne2.svg)
 
 ### Troubleshooting
 
