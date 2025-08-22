@@ -360,6 +360,14 @@
             bindings = <&none &kp PRCNT &kp GT &kp PRCNT>;
             label = "R_PIPE";
         };
+
+        caps_macro: caps_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPS>;
+            label = "CAPS_MACRO";
+            tap-ms = <200>;
+        };
     };
 
     keymap {
@@ -427,7 +435,7 @@
             label = "4";
             bindings = <
   &sys_reset  &trans         &trans     &trans          &trans    &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)
-  &kp LCMD    &kp LEFT_ALT   &kp LCTRL  &kp LEFT_SHIFT  &trans    &kp CAPS       &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+  &kp LCMD    &kp LEFT_ALT   &kp LCTRL  &kp LEFT_SHIFT  &trans    &caps_macro    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
   &trans      &kp RIGHT_ALT  &trans     &trans          &trans    &kp RS(INS)    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
                              &trans     &trans          &trans    &trans         &trans     &trans
             >;
