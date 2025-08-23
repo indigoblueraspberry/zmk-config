@@ -418,10 +418,10 @@ ZMK_TRI_STATE(
 
             label = "Base";
             bindings = <
-  &kp Q        &hml RALT W      &kp E              &kp R                &kp T                &kp Y                &kp U                    &kp I              &hmr LALT O        &kp SQT
-  &hml LCMD A  &hml LALT S      &hml LCTRL D       &hml LEFT_SHIFT F    &kp G                &kp H                &hmr LEFT_SHIFT J        &hmr LCTRL K       &hmr RALT L        &hmr LCMD SEMI
-  &kp Z        &hold_layer 3 X  &kp C              &kp V                &hold_layer 1 B      &hold_layer 1 N      &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
-                                &hold_layer 6 ESC  &hold_layer 4 SPACE  &hold_layer 5 TAB    &hold_layer 8 ENTER  &hold_layer 7 BACKSPACE  &hold_layer 9 DEL
+  &kp Q        &hml RALT W      &kp E               &kp R                &kp T                &kp Y                &kp U                    &kp I              &hmr LALT O        &kp SQT
+  &hml LCMD A  &hml LALT S      &hml LCTRL D        &hml LEFT_SHIFT F    &kp G                &kp H                &hmr LEFT_SHIFT J        &hmr LCTRL K       &hmr RALT L        &hmr LCMD SEMI
+  &kp Z        &hold_layer 3 X  &kp C               &kp V                &hold_layer 1 B      &hold_layer 1 N      &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
+                                &hold_layer 6 CAPS  &hold_layer 4 SPACE  &hold_layer 5 TAB    &hold_layer 8 ENTER  &hold_layer 7 BACKSPACE  &hold_layer 9 DEL
             >;
         };
 
@@ -471,7 +471,7 @@ ZMK_TRI_STATE(
             label = "4";
             bindings = <
   &sys_reset  &trans         &trans     &trans          &trans    &kp LG(LS(Z))  &kp LG(V)  &kp LG(C)  &kp LG(X)  &kp LG(Z)
-  &kp LCMD    &kp LEFT_ALT   &kp LCTRL  &kp LEFT_SHIFT  &trans    &caps_macro    &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+  &kp LCMD    &kp LEFT_ALT   &kp LCTRL  &kp LEFT_SHIFT  &trans    &kp ESC        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
   &trans      &kp RIGHT_ALT  &trans     &trans          &trans    &kp RS(INS)    &kp HOME   &kp PG_DN  &kp PG_UP  &kp END
                              &trans     &trans          &trans    &trans         &trans     &trans
             >;
