@@ -173,6 +173,17 @@ ZMK_TRI_STATE(
             hold-trigger-on-release;
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35 32 31 30>;
         };
+
+        holdLayer_Caps: holdLayer_Caps {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDLAYER_CAPS";
+            bindings = <&mo>, <&caps_macro>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -418,10 +429,10 @@ ZMK_TRI_STATE(
 
             label = "Base";
             bindings = <
-  &kp Q        &hml RALT W      &kp E               &kp R                &kp T                &kp Y                &kp U                    &kp I              &hmr LALT O        &kp SQT
-  &hml LCMD A  &hml LALT S      &hml LCTRL D        &hml LEFT_SHIFT F    &kp G                &kp H                &hmr LEFT_SHIFT J        &hmr LCTRL K       &hmr RALT L        &hmr LCMD SEMI
-  &kp Z        &hold_layer 3 X  &kp C               &kp V                &hold_layer 1 B      &hold_layer 1 N      &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
-                                &hold_layer 6 CAPS  &hold_layer 4 SPACE  &hold_layer 5 TAB    &hold_layer 8 ENTER  &hold_layer 7 BACKSPACE  &hold_layer 9 DEL
+  &kp Q        &hml RALT W      &kp E                &kp R                &kp T                &kp Y                &kp U                    &kp I              &hmr LALT O        &kp SQT
+  &hml LCMD A  &hml LALT S      &hml LCTRL D         &hml LEFT_SHIFT F    &kp G                &kp H                &hmr LEFT_SHIFT J        &hmr LCTRL K       &hmr RALT L        &hmr LCMD SEMI
+  &kp Z        &hold_layer 3 X  &kp C                &kp V                &hold_layer 1 B      &hold_layer 1 N      &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
+                                &holdLayer_Caps 6 0  &hold_layer 4 SPACE  &hold_layer 5 TAB    &hold_layer 8 ENTER  &hold_layer 7 BACKSPACE  &hold_layer 9 DEL
             >;
         };
 
