@@ -401,12 +401,19 @@ ZMK_TRI_STATE(
         caps {
             bindings = <&caps_macro>;
             key-positions = <15 16>;
+            layers = <0>;
         };
 
         win_layer {
             bindings = <&to 1>;
             key-positions = <24 25>;
             layers = <11 2 3 4 5 6 7 8 9 10 0>;
+        };
+
+        caps_win {
+            bindings = <&kp ESC>;
+            key-positions = <15 16>;
+            layers = <1>;
         };
     };
 
