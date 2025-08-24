@@ -189,14 +189,14 @@ ZMK_TRI_STATE(
     combos {
         compatible = "zmk,combos";
 
-        base_layer {
+        mac_layer {
             bindings = <&to 0>;
             key-positions = <23 26>;
-            layers = <1 2 3 4 5 6 7 8 9 10>;
+            layers = <11 2 3 4 5 6 7 8 9 10 1>;
         };
 
         lower_layer {
-            bindings = <&to 1>;
+            bindings = <&to 11>;
             key-positions = <23 26>;
             layers = <0>;
             timeout-ms = <25>;
@@ -323,17 +323,19 @@ ZMK_TRI_STATE(
         cut_win {
             bindings = <&kp LC(X)>;
             key-positions = <23 21>;
-            layers = <11>;
+            layers = <1>;
         };
 
         copy_win {
             bindings = <&kp LC(INS)>;
             key-positions = <21 22>;
+            layers = <1>;
         };
 
         paste_win {
             bindings = <&kp LS(INS)>;
             key-positions = <23 22>;
+            layers = <1>;
         };
 
         at {
@@ -400,6 +402,12 @@ ZMK_TRI_STATE(
             bindings = <&caps_macro>;
             key-positions = <15 16>;
         };
+
+        win_layer {
+            bindings = <&to 1>;
+            key-positions = <24 25>;
+            layers = <11 2 3 4 5 6 7 8 9 10 0>;
+        };
     };
 
     macros {
@@ -429,7 +437,7 @@ ZMK_TRI_STATE(
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        mac_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -440,28 +448,22 @@ ZMK_TRI_STATE(
             bindings = <
   &kp Q        &hml RALT W      &kp E              &kp R                &kp T                &kp Y                &kp U                    &kp I              &hmr LALT O        &kp SQT
   &hml LCMD A  &hml LALT S      &hml LCTRL D       &hml LEFT_SHIFT F    &kp G                &kp H                &hmr LEFT_SHIFT J        &hmr LCTRL K       &hmr RALT L        &hmr LCMD SEMI
-  &kp Z        &hold_layer 3 X  &kp C              &kp V                &hold_layer 1 B      &hold_layer 1 N      &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
+  &kp Z        &hold_layer 3 X  &kp C              &kp V                &hold_layer 11 B     &hold_layer 11 N     &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
                                 &hold_layer 6 ESC  &hold_layer 4 SPACE  &hold_layer 5 TAB    &hold_layer 8 ENTER  &hold_layer 7 BACKSPACE  &hold_layer 9 DEL
             >;
         };
 
-        lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    |BTCLR|     | SPC |   | ENT |     | ALT |
-
-            label = "Lower";
+        win_layer {
+            label = "WBase";
             bindings = <
-  &kp N1        &kp N2        &kp N3         &kp N4        &kp N5          &kp N6       &kp N7  &kp N8  &kp N9  &kp N0
-  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4    &to 6        &to 7   &to 8   &to 9   &to 10
-  &bt BT_CLR    &trans        &bt BT_DISC 2  &trans        &bootloader     &bootloader  &to 2   &to 3   &to 4   &to 5
-                              &trans         &trans        &trans          &trans       &trans  &trans
+  &kp Q        &hml RALT W      &kp E                &kp R                &kp T                &kp Y                &kp U                    &kp I              &hmr LALT O        &kp SQT
+  &hml LCMD A  &hml LALT S      &hml LCTRL D         &hml LEFT_SHIFT F    &kp G                &kp H                &hmr LEFT_SHIFT J        &hmr LCTRL K       &hmr RALT L        &hmr LCMD SEMI
+  &kp Z        &hold_layer 3 X  &kp C                &kp V                &hold_layer 11 B     &hold_layer 11 N     &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
+                                &holdLayer_Caps 6 0  &hold_layer 4 SPACE  &hold_layer 5 TAB    &hold_layer 8 ENTER  &hold_layer 7 BACKSPACE  &hold_layer 9 DEL
             >;
         };
 
-        raise_layer {
+        colemak_kb {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
@@ -556,13 +558,19 @@ ZMK_TRI_STATE(
             >;
         };
 
-        layer_11 {
-            label = "WBase";
+        lower_layer {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    |BTCLR|     | SPC |   | ENT |     | ALT |
+
+            label = "Lower";
             bindings = <
-  &kp Q        &hml RALT W      &kp E                &kp R                &kp T                &kp Y                &kp U                    &kp I              &hmr LALT O        &kp SQT
-  &hml LCMD A  &hml LALT S      &hml LCTRL D         &hml LEFT_SHIFT F    &kp G                &kp H                &hmr LEFT_SHIFT J        &hmr LCTRL K       &hmr RALT L        &hmr LCMD SEMI
-  &kp Z        &hold_layer 3 X  &kp C                &kp V                &hold_layer 1 B      &hold_layer 1 N      &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
-                                &holdLayer_Caps 6 0  &hold_layer 4 SPACE  &hold_layer 5 TAB    &hold_layer 8 ENTER  &hold_layer 7 BACKSPACE  &hold_layer 9 DEL
+  &kp N1        &kp N2        &kp N3         &kp N4        &kp N5          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4    &to 6   &to 7   &to 8   &to 9   &to 10
+  &bt BT_CLR    &trans        &bt BT_DISC 2  &trans        &bootloader     &to 1   &to 2   &to 3   &to 4   &to 5
+                              &trans         &trans        &trans          &trans  &trans  &trans
             >;
         };
     };
