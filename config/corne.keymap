@@ -219,7 +219,8 @@ ZMK_TRI_STATE(
 
         cut {
             bindings = <&kp LG(X)>;
-            key-positions = <6 8>;
+            key-positions = <23 21>;
+            layers = <0>;
         };
 
         copy {
@@ -320,6 +321,7 @@ ZMK_TRI_STATE(
         cut_win {
             bindings = <&kp LC(X)>;
             key-positions = <23 21>;
+            layers = <11>;
         };
 
         copy_win {
