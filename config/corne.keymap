@@ -401,7 +401,7 @@ ZMK_TRI_STATE(
         caps {
             bindings = <&caps_macro>;
             key-positions = <15 16>;
-            layers = <0>;
+            layers = <0 2>;
         };
 
         win_layer {
@@ -477,7 +477,7 @@ ZMK_TRI_STATE(
             // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            label = "Raise";
+            label = "Colemak";
             bindings = <
   &kp Q        &kp W        &kp F         &kp P              &kp G     &kp J   &kp L              &kp U         &kp Y        &kp SQT
   &hml LCMD A  &hml LALT R  &hml LCTRL S  &hml LEFT_SHIFT T  &kp D     &kp H   &hmr LEFT_SHIFT N  &hmr LCTRL E  &hmr RALT I  &hmr LCMD O
@@ -565,14 +565,14 @@ ZMK_TRI_STATE(
             >;
         };
 
-        lower_layer {
+        config_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    |BTCLR|     | SPC |   | ENT |     | ALT |
 
-            label = "Lower";
+            label = "Config";
             bindings = <
   &kp N1        &kp N2        &kp N3         &kp N4        &kp N5          &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4    &to 6   &to 7   &to 8   &to 9   &to 10
