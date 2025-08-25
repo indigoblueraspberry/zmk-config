@@ -105,10 +105,10 @@ ZMK_TRI_STATE(
             mods = <(MOD_LSFT)>;
         };
 
-        hmr_lpar_lt: hmr_lpar_lt {
+        hmr_parens_lt: hmr_parens_lt {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR_LPAR_LT";
-            bindings = <&kp>, <&lpar_lt>;
+            label = "HMR_PARENS_LT";
+            bindings = <&kp>, <&parens_lt>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -184,6 +184,15 @@ ZMK_TRI_STATE(
             quick-tap-ms = <250>;
             flavor = "tap-preferred";
         };
+
+        parens_lt: parens_lt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PARENS_LT";
+            bindings = <&parens_macro>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -235,8 +244,8 @@ ZMK_TRI_STATE(
             layers = <0>;
         };
 
-        lpar {
-            bindings = <&hmr_lpar_lt RS(LCTRL) 0>;
+        parens {
+            bindings = <&hmr_parens_lt RS(LCTRL) 0>;
             key-positions = <16 17>;
         };
 
@@ -462,6 +471,13 @@ ZMK_TRI_STATE(
             bindings = <&kp CAPS>;
             label = "CAPS_MACRO";
             tap-ms = <200>;
+        };
+
+        parens_macro: macro_parens {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "MACRO_PARENS";
         };
     };
 
