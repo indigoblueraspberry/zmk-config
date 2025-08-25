@@ -202,6 +202,15 @@ ZMK_TRI_STATE(
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        sqbkts_curlybkts: sqbkts_curlybkts {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SQBKTS_CURLYBKTS";
+            bindings = <&sqbkts_macro>, <&curlybkts_macro>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -263,8 +272,8 @@ ZMK_TRI_STATE(
             key-positions = <17 18>;
         };
 
-        lbkt {
-            bindings = <&lbkt_lbrc>;
+        sqbkts_curlybkts {
+            bindings = <&sqbkts_curlybkts>;
             key-positions = <26 27>;
         };
 
@@ -487,6 +496,20 @@ ZMK_TRI_STATE(
             #binding-cells = <0>;
             bindings = <&kp LPAR &kp RPAR &kp LEFT>;
             label = "MACRO_PARENS";
+        };
+
+        sqbkts_macro: sqbkts_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT &kp RBKT &kp LEFT>;
+            label = "SQBKTS_MACRO";
+        };
+
+        curlybkts_macro: curlybkts_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC &kp RBRC &kp LEFT>;
+            label = "CURLYBKTS_MACRO";
         };
     };
 
