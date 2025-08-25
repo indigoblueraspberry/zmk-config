@@ -128,10 +128,10 @@ ZMK_TRI_STATE(
             mods = <(MOD_LSFT)>;
         };
 
-        hmr_rpar_gt: hmr_rpar_gt {
+        hmr_none_gt: hmr_none_gt {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR_RPAR_GT";
-            bindings = <&kp>, <&rpar_gt>;
+            label = "HMR_NONE_GT";
+            bindings = <&kp>, <&none_gt>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -193,6 +193,15 @@ ZMK_TRI_STATE(
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        none_gt: none_gt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NONE_GT";
+            bindings = <&none>, <&kp GT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -244,13 +253,13 @@ ZMK_TRI_STATE(
             layers = <0>;
         };
 
-        parens {
+        parens_lt {
             bindings = <&hmr_parens_lt RS(LCTRL) 0>;
             key-positions = <16 17>;
         };
 
-        rpar {
-            bindings = <&hmr_rpar_gt RS(LALT) 0>;
+        none_gt {
+            bindings = <&hmr_none_gt RS(LALT) 0>;
             key-positions = <17 18>;
         };
 
