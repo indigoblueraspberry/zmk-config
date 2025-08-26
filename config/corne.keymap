@@ -534,6 +534,30 @@ ZMK_TRI_STATE(
             key-positions = <35 34>;
             layers = <1>;
         };
+
+        navbck_wrd {
+            bindings = <&kp LA(LEFT)>;
+            key-positions = <6 7>;
+            layers = <0>;
+        };
+
+        navnxt_wrd {
+            bindings = <&kp LA(RIGHT)>;
+            key-positions = <7 8>;
+            layers = <0>;
+        };
+
+        win_navbck_wrd {
+            bindings = <&kp LC(LEFT)>;
+            key-positions = <6 7>;
+            layers = <1>;
+        };
+
+        win_navnxt_wrd {
+            bindings = <&kp LC(RIGHT)>;
+            key-positions = <7 8>;
+            layers = <1>;
+        };
     };
 
     macros {
