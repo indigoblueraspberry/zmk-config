@@ -128,10 +128,10 @@ ZMK_TRI_STATE(
             mods = <(MOD_LSFT)>;
         };
 
-        hmr_none_gt: hmr_none_gt {
+        hmr_curlybkts_gt: hmr_curlybkts_gt {
             compatible = "zmk,behavior-hold-tap";
-            label = "HMR_NONE_GT";
-            bindings = <&kp>, <&none_gt>;
+            label = "HMR_CURLYBKTS_GT";
+            bindings = <&kp>, <&curlybkts_gt>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -194,19 +194,19 @@ ZMK_TRI_STATE(
             mods = <(MOD_LSFT)>;
         };
 
-        none_gt: none_gt {
+        curlybkts_gt: curlybkts_gt {
             compatible = "zmk,behavior-mod-morph";
-            label = "NONE_GT";
-            bindings = <&none>, <&kp GT>;
+            label = "CURLYBKTS_GT";
+            bindings = <&curlybkts_macro>, <&kp GT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
 
-        sqbkts_curlybkts: sqbkts_curlybkts {
+        sqbkts_none: sqbkts_none {
             compatible = "zmk,behavior-mod-morph";
-            label = "SQBKTS_CURLYBKTS";
-            bindings = <&sqbkts_macro>, <&curlybkts_macro>;
+            label = "SQBKTS_NONE";
+            bindings = <&sqbkts_macro>, <&none>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -267,13 +267,13 @@ ZMK_TRI_STATE(
             key-positions = <16 17>;
         };
 
-        none_gt {
-            bindings = <&hmr_none_gt RS(LALT) 0>;
+        curlybkts_gt {
+            bindings = <&hmr_curlybkts_gt RS(LALT) 0>;
             key-positions = <17 18>;
         };
 
-        sqbkts_curlybkts {
-            bindings = <&sqbkts_curlybkts>;
+        sqbkts_none {
+            bindings = <&sqbkts_none>;
             key-positions = <26 27>;
         };
 
@@ -510,7 +510,6 @@ ZMK_TRI_STATE(
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
             label = "CURLYBKTS_MACRO";
-            wait-ms = <30>;
         };
     };
 
