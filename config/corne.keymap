@@ -508,6 +508,30 @@ ZMK_TRI_STATE(
             key-positions = <20 21>;
             layers = <1>;
         };
+
+        dbck_wrd {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <30 31>;
+            layers = <0>;
+        };
+
+        dnxt_wrd {
+            bindings = <&kp LA(DEL)>;
+            key-positions = <35 34>;
+            layers = <0>;
+        };
+
+        win_dbck_wrd {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <30 31>;
+            layers = <1>;
+        };
+
+        win_dnxt_wrd {
+            bindings = <&kp LC(DEL)>;
+            key-positions = <35 34>;
+            layers = <1>;
+        };
     };
 
     macros {
