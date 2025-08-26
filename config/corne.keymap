@@ -633,6 +633,7 @@ ZMK_TRI_STATE(
                 <&kp J>;
 
             label = "ENYE_MACRO";
+            wait-ms = <50>;
         };
     };
 
