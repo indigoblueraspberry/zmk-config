@@ -277,8 +277,8 @@ ZMK_TRI_STATE(
             key-positions = <26 27>;
         };
 
-        rbkt {
-            bindings = <&rbkt_rbrc>;
+        none {
+            bindings = <&none>;
             key-positions = <27 28>;
         };
 
@@ -508,7 +508,7 @@ ZMK_TRI_STATE(
         curlybkts_macro: curlybkts_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LBRC &kp RBRC &kp LEFT>;
+            bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
             label = "CURLYBKTS_MACRO";
         };
     };
