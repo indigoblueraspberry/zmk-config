@@ -622,6 +622,18 @@ ZMK_TRI_STATE(
             bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
             label = "CURLYBKTS_MACRO";
         };
+
+        enye_macro: enye_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp N>,
+                <&macro_release>,
+                <&kp N>;
+
+            label = "ENYE_MACRO";
+        };
     };
 
     keymap {
@@ -751,10 +763,10 @@ ZMK_TRI_STATE(
         unicode {
             label = "Uni";
             bindings = <
-  &none  &none  &none   &none   &none     &none   &none  &none   &none  &none
-  &none  &none  &none   &none   &none     &none   &none  &none   &none  &none
-  &none  &none  &none   &none   &none     &none   &none  &none   &none  &none
-                &trans  &trans  &trans    &trans  &trans &trans
+  &none  &none  &none   &none   &none     &none   &none        &none   &none  &none
+  &none  &none  &none   &none   &none     &none   &enye_macro  &none   &none  &none
+  &none  &none  &none   &none   &none     &none   &none        &none   &none  &none
+                &trans  &trans  &trans    &trans  &trans       &trans
             >;
         };
 
