@@ -218,10 +218,10 @@ ZMK_TRI_STATE(
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <190>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <0>;
-            flavor = "hold-preferred";
+            tapping-term-ms = <230>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
         };
 
         hml_shft: hml_shft {
@@ -230,10 +230,10 @@ ZMK_TRI_STATE(
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <190>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <0>;
-            flavor = "hold-preferred";
+            tapping-term-ms = <230>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
         };
     };
 
