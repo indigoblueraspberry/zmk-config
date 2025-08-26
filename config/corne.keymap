@@ -753,7 +753,7 @@ ZMK_TRI_STATE(
             label = "Uni";
             bindings = <
   &none  &none  &none   &none   &none     &none   &none   &none   &none  &none
-  &none  &none  &none   &none   &none     &none   &none   &none   &none  &none
+  &none  &none  &none   &none   &none     &none   &kp ES_N_TILDE   &none   &none  &none
   &none  &none  &none   &none   &none     &none   &none   &none   &none  &none
                 &trans  &trans  &trans    &trans  &trans  &trans
             >;
