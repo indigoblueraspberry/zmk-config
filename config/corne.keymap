@@ -241,15 +241,6 @@ ZMK_TRI_STATE(
             hold-trigger-on-release;
             hold-trigger-key-positions = <5 6 7 8 9 15 18 19 25 26 27 28 29 33 34 35 16 17>;
         };
-
-        enye_deadkey_mac: behavior_macro {
-            compatible = "zmk,behavior-macro";
-            label = "ENYE_DK_MAC";
-            #binding-cells = <0>;
-            bindings =
-              <&macro_tap &kp LA(N)>,   /* start tilde accent dead key */
-              <&macro_tap &kp N>;       /* compose ñ */
-        };
     };
 
     combos {
@@ -760,10 +751,10 @@ ZMK_TRI_STATE(
         unicode {
             label = "Uni";
             bindings = <
-  &none  &none  &none   &none   &none     &none   &none           &none   &none  &none
-  &none  &none  &none   &none   &none     &none   &kp enye_deadkey_mac  &none   &none  &none
-  &none  &none  &none   &none   &none     &none   &none           &none   &none  &none
-                &trans  &trans  &trans    &trans  &trans          &trans
+  &none  &none  &none   &none   &none     &none   &none  &none   &none  &none
+  &none  &none  &none   &none   &none     &none   &none  &none   &none  &none
+  &none  &none  &none   &none   &none     &none   &none  &none   &none  &none
+                &trans  &trans  &trans    &trans  &trans &trans
             >;
         };
 
