@@ -510,6 +510,7 @@ ZMK_TRI_STATE(
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
             label = "CURLYBKTS_MACRO";
+            wait-ms = <30>;
         };
     };
 
