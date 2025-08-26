@@ -262,6 +262,7 @@ ZMK_TRI_STATE(
         num_layer {
             bindings = <&to 6>;
             key-positions = <3 4>;
+            layers = <0>;
         };
 
         caps_word {
@@ -568,6 +569,12 @@ ZMK_TRI_STATE(
         win_clipboard {
             bindings = <&kp LC(GRAVE)>;
             key-positions = <10 11>;
+            layers = <1>;
+        };
+
+        wnum_layer {
+            bindings = <&to 7>;
+            key-positions = <3 4>;
             layers = <1>;
         };
     };
