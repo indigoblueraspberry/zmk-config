@@ -494,6 +494,18 @@ ZMK_TRI_STATE(
             key-positions = <29 28>;
             layers = <1>;
         };
+
+        mac_scrnsht {
+            bindings = <&kp LG(LC(LS(NUMBER_4)))>;
+            key-positions = <20 21>;
+            layers = <0>;
+        };
+
+        win_scrnsht {
+            bindings = <&kp PSCRN>;
+            key-positions = <20 21>;
+            layers = <1>;
+        };
     };
 
     macros {
