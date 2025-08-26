@@ -441,11 +441,13 @@ ZMK_TRI_STATE(
         R_in_pipe {
             bindings = <&R_in_pipe>;
             key-positions = <16 18>;
+            require-prior-idle-ms = <100>;
         };
 
         R_pipe {
             bindings = <&R_pipe>;
             key-positions = <3 16>;
+            require-prior-idle-ms = <100>;
         };
 
         mouse {
