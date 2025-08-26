@@ -467,7 +467,7 @@ ZMK_TRI_STATE(
         win_layer {
             bindings = <&to 1>;
             key-positions = <24 25>;
-            layers = <11 2 3 4 5 6 8 9 10 0>;
+            layers = <11 2 3 4 5 8 9 10 0 7>;
         };
 
         caps_win {
