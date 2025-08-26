@@ -26,6 +26,8 @@ ZMK_TRI_STATE(
 )
 */
 
+&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE SEMICOLON>; };
+
 / {
     chosen { zmk,matrix_transform = &five_column_transform; };
 };
