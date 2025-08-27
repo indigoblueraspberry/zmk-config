@@ -632,9 +632,7 @@ ZMK_TRI_STATE(
                 <&macro_tap>,
                 <&kp J>,
                 <&macro_release>,
-                <&kp LEFT_ALT>,
-                <&macro_tap>,
-                <&kp J>;
+                <&kp LEFT_ALT>;
 
             label = "ENYE_MACRO";
         };
