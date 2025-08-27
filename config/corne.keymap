@@ -660,6 +660,20 @@ ZMK_TRI_STATE(
 
             label = "ACCENT_MACRO";
         };
+
+        euro_macro: euro_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp NUMBER_2>,
+                <&macro_release>,
+                <&kp LEFT_ALT &kp LEFT_SHIFT>;
+
+            label = "EURO_MACRO";
+        };
     };
 
     keymap {
@@ -789,9 +803,9 @@ ZMK_TRI_STATE(
         unicode {
             label = "Uni";
             bindings = <
-  &none  &none  &none   &none   &none     &none          &none         &none   &none  &none
-  &none  &none  &none   &none   &none     &none          &tilde_macro  &none   &none  &none
-  &none  &none  &none   &none   &none     &none          &none         &none   &none  &none
+  &none  &none  &none   &none   &none     &none          &none         &none                 &none  &none
+  &none  &none  &none   &none   &none     &none          &tilde_macro  &kp LA(LS(NUMBER_2))  &none  &none
+  &none  &none  &none   &none   &none     &none          &none         &none                 &none  &none
                 &trans  &trans  &trans    &accent_macro  &trans        &trans
             >;
         };
