@@ -813,10 +813,10 @@ ZMK_TRI_STATE(
         win_unicode {
             label = "WUni";
             bindings = <
-  &none  &none  &none   &none   &none     &none          &none      &none             &none  &none
-  &none  &none  &none   &none   &none     &none          &kp RA(J)  &kp RA(NUMBER_5)  &none  &none
-  &none  &none  &none   &none   &none     &none          &none      &none             &none  &none
-                &trans  &trans  &trans    &accent_macro  &trans     &trans
+  &none  &none  &none   &none   &none     &none  &none      &none             &none  &none
+  &none  &none  &none   &none   &none     &none  &kp RA(J)  &kp RA(NUMBER_5)  &none  &none
+  &none  &none  &none   &none   &none     &none  &none      &none             &none  &none
+                &trans  &trans  &trans    &none  &trans     &trans
             >;
         };
 
