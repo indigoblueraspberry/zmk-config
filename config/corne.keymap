@@ -259,11 +259,11 @@ ZMK_TRI_STATE(
         mac_layer {
             bindings = <&to 0>;
             key-positions = <23 26>;
-            layers = <12 2 3 4 5 6 8 9 10 1 7>;
+            layers = <13 2 3 4 5 6 8 9 10 1 7>;
         };
 
         lower_layer {
-            bindings = <&to 12>;
+            bindings = <&to 13>;
             key-positions = <23 26>;
             layers = <0>;
             timeout-ms = <25>;
@@ -477,7 +477,7 @@ ZMK_TRI_STATE(
         win_layer {
             bindings = <&to 1>;
             key-positions = <24 25>;
-            layers = <12 2 3 4 5 8 9 10 0 7 6>;
+            layers = <13 2 3 4 5 8 9 10 0 7 6>;
         };
 
         caps_win {
@@ -690,7 +690,7 @@ ZMK_TRI_STATE(
             bindings = <
   &kp Q        &hml RALT W      &kp E              &kp R                   &kp T                 &kp Y                &kp U                    &kp I              &hmr LALT O        &kp SQT
   &hml LCMD A  &hml LALT S      &hml LCTRL D       &hml_shft LEFT_SHIFT F  &kp G                 &kp H                &hmr_shft LEFT_SHIFT J   &hmr LCTRL K       &hmr RALT L        &hmr LCMD SEMI
-  &kp Z        &hold_layer 3 X  &kp C              &kp V                   &hold_layer 12 B      &hold_layer 12 N     &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
+  &kp Z        &hold_layer 3 X  &kp C              &kp V                   &hold_layer 13 B      &hold_layer 13 N     &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
                                 &hold_layer 5 ESC  &hold_layer 4 SPACE     &hold_layer 11 TAB    &hold_layer 8 ENTER  &hold_layer 6 BACKSPACE  &hold_layer 9 DEL
             >;
         };
@@ -698,10 +698,10 @@ ZMK_TRI_STATE(
         win_layer {
             label = "WBase";
             bindings = <
-  &trans  &trans  &trans               &trans  &trans    &trans  &trans                   &trans  &trans  &trans
-  &trans  &trans  &trans               &trans  &trans    &trans  &trans                   &trans  &trans  &trans
-  &trans  &trans  &trans               &trans  &trans    &trans  &trans                   &trans  &trans  &trans
-                  &holdLayer_Caps 5 0  &trans  &trans    &trans  &hold_layer 7 BACKSPACE  &trans
+  &trans  &trans  &trans               &trans  &trans                &trans  &trans                   &trans  &trans  &trans
+  &trans  &trans  &trans               &trans  &trans                &trans  &trans                   &trans  &trans  &trans
+  &trans  &trans  &trans               &trans  &trans                &trans  &trans                   &trans  &trans  &trans
+                  &holdLayer_Caps 5 0  &trans  &hold_layer 12 TAB    &trans  &hold_layer 7 BACKSPACE  &trans
             >;
         };
 
@@ -807,6 +807,16 @@ ZMK_TRI_STATE(
   &none  &none  &none   &none   &none     &none          &tilde_macro  &kp LA(LS(NUMBER_2))  &none  &none
   &none  &none  &none   &none   &none     &none          &none         &none                 &none  &none
                 &trans  &trans  &trans    &accent_macro  &trans        &trans
+            >;
+        };
+
+        win_unicode {
+            label = "WUni";
+            bindings = <
+  &none  &none  &none   &none   &none     &none          &none      &none                 &none  &none
+  &none  &none  &none   &none   &none     &none          &kp RA(J)  &kp LA(LS(NUMBER_2))  &none  &none
+  &none  &none  &none   &none   &none     &none          &none      &none                 &none  &none
+                &trans  &trans  &trans    &accent_macro  &trans     &trans
             >;
         };
 
