@@ -774,10 +774,10 @@ ZMK_TRI_STATE(
         layer_8 {
             label = "Sym";
             bindings = <
-  &kp LEFT_BRACE  &kp AMPS    &kp STAR              &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &trans  &trans     &trans     &trans    &sys_reset
-  &kp LS(P)       &kp DOLLAR  &kp PERCENT           &kp CARET              &kp PLUS           &trans  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
-  &kp TILDE       &kp EXCL    &kp AT                &kp HASH               &kp PIPE           &trans  &trans     &trans     &kp RALT  &trans
-                              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER          &trans  &trans     &trans
+  &kp LEFT_BRACE  &kp AMPS    &kp STAR              &kp LEFT_PARENTHESIS   &kp RIGHT_BRACE    &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans    &sys_reset
+  &kp LS(P)       &kp DOLLAR  &kp PERCENT           &kp CARET              &kp PLUS           &trans  &kp LSHFT         &kp LCTRL          &kp LALT  &kp LGUI
+  &kp TILDE       &kp EXCL    &kp AT                &kp HASH               &kp PIPE           &trans  &trans            &trans             &kp RALT  &trans
+                              &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER          &trans  &trans            &trans
             >;
         };
 
