@@ -13,6 +13,7 @@
 //#include "zmk-helpers/helper.h"
 //#include "zmk-helpers/key-labels/36.h"
 
+#define COMBO_IDLE_MS 350
 #define MOUSE 10
 
 // Smart-mouse, requires tri-state module.
@@ -306,19 +307,19 @@ ZMK_TRI_STATE(
         parens_lt {
             bindings = <&hmr_parens_lt RS(LCTRL) 0>;
             key-positions = <16 17>;
-            require-prior-idle-ms = <400>;
+            require-prior-idle-ms = <COMBO_IDLE_MS>;
         };
 
         curlybkts_gt {
             bindings = <&hmr_curlybkts_gt RS(LALT) 0>;
             key-positions = <17 18>;
-            require-prior-idle-ms = <400>;
+            require-prior-idle-ms = <COMBO_IDLE_MS>;
         };
 
         sqbkts_none {
             bindings = <&sqbkts_none>;
             key-positions = <26 27>;
-            require-prior-idle-ms = <400>;
+            require-prior-idle-ms = <COMBO_IDLE_MS>;
         };
 
         none {
@@ -457,13 +458,13 @@ ZMK_TRI_STATE(
         R_in_pipe {
             bindings = <&R_in_pipe>;
             key-positions = <16 18>;
-            require-prior-idle-ms = <400>;
+            require-prior-idle-ms = <COMBO_IDLE_MS>;
         };
 
         R_pipe {
             bindings = <&R_pipe>;
             key-positions = <3 16>;
-            require-prior-idle-ms = <400>;
+            require-prior-idle-ms = <COMBO_IDLE_MS>;
         };
 
         mouse {
@@ -577,14 +578,14 @@ ZMK_TRI_STATE(
             bindings = <&kp RA(RG(C))>;
             key-positions = <10 11>;
             layers = <0>;
-            require-prior-idle-ms = <400>;
+            require-prior-idle-ms = <COMBO_IDLE_MS>;
         };
 
         win_clipboard {
             bindings = <&kp LC(GRAVE)>;
             key-positions = <10 11>;
             layers = <1>;
-            require-prior-idle-ms = <400>;
+            require-prior-idle-ms = <COMBO_IDLE_MS>;
         };
 
         wnum_layer {
