@@ -706,7 +706,7 @@ ZMK_TRI_STATE(
         dblquote_macro: dblquote_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DQT &kp DQT &kp LEFT>;
+            bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
             label = "DBLQUOTE_MACRO";
         };
     };
