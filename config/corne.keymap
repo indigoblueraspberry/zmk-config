@@ -256,7 +256,7 @@ ZMK_TRI_STATE(
         quote_dblquote: quote_dblquote {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTE_DBLQUOTE";
-            bindings = <&quote_macro>, <&dblquote_macro>;
+            bindings = <&dblquote_macro>, <&quote_macro>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
