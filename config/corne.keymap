@@ -252,6 +252,15 @@ ZMK_TRI_STATE(
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        quote_dblquote: quote_dblquote {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUOTE_DBLQUOTE";
+            bindings = <&quote_macro>, <&dblquote_macro>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -593,6 +602,12 @@ ZMK_TRI_STATE(
             key-positions = <3 4>;
             layers = <1>;
         };
+
+        quote_dblquote {
+            bindings = <&quote_dblquote>;
+            key-positions = <9 19>;
+            require-prior-idle-ms = <COMBO_IDLE_MS>;
+        };
     };
 
     macros {
@@ -679,6 +694,20 @@ ZMK_TRI_STATE(
                 <&kp LEFT_ALT &kp LEFT_SHIFT>;
 
             label = "EURO_MACRO";
+        };
+
+        quote_macro: quote_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp SQT &kp LEFT>;
+            label = "QUOTE_MACRO";
+        };
+
+        dblquote_macro: dblquote_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DQT &kp DQT &kp LEFT>;
+            label = "DBLQUOTE_MACRO";
         };
     };
 
