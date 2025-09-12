@@ -261,6 +261,15 @@ ZMK_TRI_STATE(
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        dbckwrd_dbckline: dbckwrd_dbckline {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DBCKWRD_DBCKLINE";
+            bindings = <&kp LA(BACKSPACE)>, <&kp RG(BACKSPACE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -537,7 +546,7 @@ ZMK_TRI_STATE(
 
         dbck_wrd {
             bindings = <&kp LA(BACKSPACE)>;
-            key-positions = <30 31>;
+            key-positions = <>;
             layers = <0>;
         };
 
@@ -607,6 +616,12 @@ ZMK_TRI_STATE(
             bindings = <&quote_dblquote>;
             key-positions = <9 19>;
             require-prior-idle-ms = <COMBO_IDLE_MS>;
+        };
+
+        dbckwrd_dbckline {
+            bindings = <&dbckwrd_dbckline>;
+            key-positions = <30 31>;
+            layers = <0>;
         };
     };
 
