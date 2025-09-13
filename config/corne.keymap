@@ -279,6 +279,15 @@ ZMK_TRI_STATE(
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        dfwdwrd_dfwdline: dfwdwrd_dfwdline {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DFWDWRD_DFWDLINE";
+            bindings = <&kp LA(DEL)>, <&dfwdline_macro>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -561,7 +570,7 @@ ZMK_TRI_STATE(
 
         dnxt_wrd {
             bindings = <&kp LA(DEL)>;
-            key-positions = <35 34>;
+            key-positions = <>;
             layers = <0>;
         };
 
@@ -637,6 +646,12 @@ ZMK_TRI_STATE(
             bindings = <&win_dbckwrd_dbckline>;
             key-positions = <30 31>;
             layers = <1>;
+        };
+
+        dfwdwrd_dfwdline {
+            bindings = <&dfwdwrd_dfwdline>;
+            key-positions = <35 34>;
+            layers = <0>;
         };
     };
 
@@ -745,6 +760,13 @@ ZMK_TRI_STATE(
             #binding-cells = <0>;
             bindings = <&kp RS(HOME) &kp BACKSPACE>;
             label = "WIN_DBCKLINE_MACRO";
+        };
+
+        dfwdline_macro: dfwdline_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(RIGHT)) &kp BACKSPACE>;
+            label = "DFWDLINE_MACRO";
         };
     };
 
