@@ -668,6 +668,11 @@ ZMK_TRI_STATE(
             key-positions = <35 34>;
             layers = <1>;
         };
+
+        shift-enter {
+            bindings = <&kp RS(ENTER)>;
+            key-positions = <16 33>;
+        };
     };
 
     macros {
