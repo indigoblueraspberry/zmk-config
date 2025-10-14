@@ -305,6 +305,7 @@ ZMK_TRI_STATE(
             #binding-cells = <1>;
             quick-release;
             ignore-modifiers;
+            release-after-ms = <60000>;
         };
     };
 
