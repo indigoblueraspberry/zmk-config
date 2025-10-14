@@ -303,7 +303,6 @@ ZMK_TRI_STATE(
             label = "SQK";
             bindings = <&kp>;
             #binding-cells = <1>;
-            release-after-ms = <1000>;
             quick-release;
             ignore-modifiers;
         };
