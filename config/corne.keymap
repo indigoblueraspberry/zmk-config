@@ -528,7 +528,7 @@ ZMK_TRI_STATE(
         };
 
         caps {
-            bindings = <&caps_macro>;
+            bindings = <&kp ESC>;
             key-positions = <15 16>;
             layers = <0 2>;
         };
@@ -824,10 +824,10 @@ ZMK_TRI_STATE(
 
             label = "Base";
             bindings = <
-  &kp Q        &hml RALT W      &kp E              &kp R                   &kp T                 &kp Y                &kp U                    &kp I              &hmr LALT O        &kp SQT
-  &hml LCMD A  &hml LALT S      &hml LCTRL D       &hml_shft LEFT_SHIFT F  &kp G                 &kp H                &hmr_shft LEFT_SHIFT J   &hmr LCTRL K       &hmr RALT L        &hmr LCMD SEMI
-  &kp Z        &hold_layer 3 X  &kp C              &kp V                   &hold_layer 13 B      &hold_layer 13 N     &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
-                                &hold_layer 5 ESC  &hold_layer 4 SPACE     &hold_layer 11 TAB    &hold_layer 8 ENTER  &hold_layer 6 BACKSPACE  &hold_layer 9 DEL
+  &kp Q        &hml RALT W      &kp E               &kp R                   &kp T                 &kp Y                &kp U                    &kp I              &hmr LALT O        &kp SQT
+  &hml LCMD A  &hml LALT S      &hml LCTRL D        &hml_shft LEFT_SHIFT F  &kp G                 &kp H                &hmr_shft LEFT_SHIFT J   &hmr LCTRL K       &hmr RALT L        &hmr LCMD SEMI
+  &kp Z        &hold_layer 3 X  &kp C               &kp V                   &hold_layer 13 B      &hold_layer 13 N     &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
+                                &hold_layer 5 CAPS  &hold_layer 4 SPACE     &hold_layer 11 TAB    &hold_layer 8 ENTER  &hold_layer 6 BACKSPACE  &hold_layer 9 DEL
             >;
         };
 
