@@ -860,10 +860,10 @@ ZMK_TRI_STATE(
         layer_3 {
             label = "Shortcuts";
             bindings = <
-  &none  &none  &kp LG(LC(LS(E)))  &none              &none     &none   &none              &none              &kp LG(LC(LS(O)))  &none
-  &none  &none  &kp LG(LC(LS(D)))  &kp LG(LC(LS(F)))  &none     &none   &kp LG(LC(LS(J)))  &kp LG(LC(LS(K)))  &none              &none
-  &none  &none  &kp LG(LC(LS(C)))  &none              &none     &none   &kp LG(LC(LS(M)))  &none              &none              &none
-                &trans             &trans             &trans    &trans  &trans             &trans
+  &none  &none  &kp LG(LC(LS(E)))  &none              &kp LG(LC(LS(T)))    &none   &none              &none              &kp LG(LC(LS(O)))  &none
+  &none  &none  &kp LG(LC(LS(D)))  &kp LG(LC(LS(F)))  &none                &none   &kp LG(LC(LS(J)))  &kp LG(LC(LS(K)))  &none              &none
+  &none  &none  &kp LG(LC(LS(C)))  &none              &none                &none   &kp LG(LC(LS(M)))  &none              &none              &none
+                &trans             &trans             &trans               &trans  &trans             &trans
             >;
         };
 
