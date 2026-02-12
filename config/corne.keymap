@@ -688,6 +688,11 @@ ZMK_TRI_STATE(
             bindings = <&sqk LEFT_SHIFT>;
             key-positions = <32 33>;
         };
+
+        win_context_menu {
+            bindings = <&kp K_CONTEXT_MENU>;
+            key-positions = <0 1>;
+        };
     };
 
     macros {
