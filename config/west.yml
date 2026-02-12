@@ -19,7 +19,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3
       import: app/west.yml
 
     # ZMK modules
@@ -39,15 +39,15 @@ manifest:
     # support nice_oled and nice_epaper
     - name: zmk-nice-oled
       remote: mctechnology17
-      revision: main
+      revision: v0.3
       path: modules/zmk/nice-oled
     - name: nice-view-battery
       remote: infely
-      revision: main
+      revision: v0.3
       path: modules/zmk/nice-view-battery
     - name: zmk-locales
       remote: joelspadin
-      revision: main
+      revision: v0.3
       path: modules/zmk/locales
 
     # Temporarily overload Zephyr until upstream fix lands
