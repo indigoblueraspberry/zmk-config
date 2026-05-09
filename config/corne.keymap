@@ -307,6 +307,14 @@ ZMK_TRI_STATE(
             ignore-modifiers;
             release-after-ms = <60000>;
         };
+
+        td_tmux: tap_dance_tmux {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_TMUX";
+            #binding-cells = <0>;
+            tapping-term-ms = <500>;
+            bindings = <&kp LC(A)>, <&kp LC(G)>;
+        };
     };
 
     combos {
@@ -506,7 +514,7 @@ ZMK_TRI_STATE(
         };
 
         tmux_leading {
-            bindings = <&kp LC(A)>;
+            bindings = <&td_tmux>;
             key-positions = <34 31>;
         };
 
