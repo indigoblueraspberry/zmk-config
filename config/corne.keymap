@@ -312,7 +312,7 @@ ZMK_TRI_STATE(
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_TMUX";
             #binding-cells = <0>;
-            tapping-term-ms = <500>;
+            tapping-term-ms = <200>;
             bindings = <&kp LC(A)>, <&kp LC(G)>;
         };
     };
