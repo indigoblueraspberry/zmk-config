@@ -315,6 +315,16 @@ ZMK_TRI_STATE(
             tapping-term-ms = <200>;
             bindings = <&kp LC(A)>, <&kp LC(G)>;
         };
+
+        fn_ptt: fn_ptt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FN_PTT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -516,6 +526,11 @@ ZMK_TRI_STATE(
         tmux_leading {
             bindings = <&td_tmux>;
             key-positions = <34 31>;
+        };
+
+        fn_ptt {
+            bindings = <&fn_ptt F13 LC(F13)>;
+            key-positions = <31 32>;
         };
 
         R_in_pipe {
