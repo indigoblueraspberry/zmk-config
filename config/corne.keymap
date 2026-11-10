@@ -529,7 +529,7 @@ ZMK_TRI_STATE(
         };
 
         fn_ptt {
-            bindings = <&fn_ptt F13 LC(F13)>;
+            bindings = <&fn_ptt F16 LC(F16)>;
             key-positions = <31 32>;
         };
 
