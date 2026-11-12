@@ -838,6 +838,19 @@ ZMK_TRI_STATE(
             bindings = <&kp RS(END) &kp BACKSPACE>;
             label = "WIN_DFWDLINE_MACRO";
         };
+
+        // Opens Moom keyboard control (Cmd+Shift+M), then sends the preset digit.
+        moom: moom {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_wait_time 120>,
+                <&macro_tap &kp LS(LG(M))>,
+                <&macro_param_1to1>,
+                <&macro_tap &kp MACRO_PLACEHOLDER>;
+
+            label = "MOOM";
+        };
     };
 
     keymap {
@@ -854,7 +867,7 @@ ZMK_TRI_STATE(
             bindings = <
   &kp Q        &hml RALT W      &kp E               &kp R                   &kp T                 &kp Y                &kp U                    &kp I              &hmr LALT O        &kp SQT
   &hml LCMD A  &hml LALT S      &hml LCTRL D        &hml_shft LEFT_SHIFT F  &kp G                 &kp H                &hmr_shft LEFT_SHIFT J   &hmr LCTRL K       &hmr RALT L        &hmr LCMD SEMI
-  &kp Z        &hold_layer 3 X  &kp C               &kp V                   &hold_layer 13 B      &hold_layer 13 N     &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
+  &kp Z        &hold_layer 3 X  &hold_layer 14 C    &kp V                  &hold_layer 13 B      &hold_layer 13 N     &kp M                    &kp COMMA          &hold_layer 3 DOT  &kp QUESTION
                                 &hold_layer 5 CAPS  &hold_layer 4 SPACE     &hold_layer 11 TAB    &hold_layer 8 ENTER  &hold_layer 6 BACKSPACE  &hold_layer 9 DEL
             >;
         };
@@ -997,6 +1010,17 @@ ZMK_TRI_STATE(
   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4    &to 5   &to 6   &to 8   &to 9   &to 10
   &bt BT_CLR    &trans        &bt BT_DISC 2  &trans        &bootloader     &to 1   &to 2   &to 3   &to 4   &to 0
                               &trans         &trans        &trans          &trans  &trans  &trans
+            >;
+        };
+
+        window_layer {
+            // Hold C. Moom presets: 1/2/3 = left/center/right (resize), 4/5/6 = prev display/fill/next display, 0 = center.
+            label = "Win";
+            bindings = <
+  &none  &none  &none   &none   &none     &none  &moom N4  &moom N5  &moom N6  &none
+  &none  &none  &none   &none   &none     &none  &moom N1  &moom N2  &moom N3  &none
+  &none  &none  &none   &none   &none     &none  &none     &moom N0  &none     &none
+                &trans  &trans  &trans    &trans  &trans   &trans
             >;
         };
     };
